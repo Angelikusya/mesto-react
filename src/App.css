@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+@import url("../vendor/normalize.css");
+@import url("../vendor/fonts/fonts.css");
+@import url("../blocks/page/page.css");
+@import url("../blocks/header/header.css");
+@import url("../blocks/header/__logo/header__logo.css");
+@import url("../blocks/profile/profile.css");
+@import url("../blocks/profile/__name/profile__name.css");
+@import url("../blocks/profile/__avatar/profile__avatar.css");
+@import url("../blocks/profile/__edit-avatar/profile__edit-avatar");
+@import url("../blocks/profile/__edit-avatar-icon/profile__edit-avatar-icon.css");
+@import url("../blocks/profile/__job/profile__job.css");
+@import url("../blocks/profile/__info/profile__info.css");
+@import url("../blocks/profile/__content/profile__content.css");
+@import url("../blocks/profile/__container/profile__container.css");
+@import url("../blocks/profile/__edit-button/profile__edit-button.css");
+@import url("../blocks/profile/__add-button/profile__add-button.css");
+@import url("../blocks/button/button.css");
+@import url("../blocks/elements/elements.css");
+@import url("../blocks/element/element.css");
+@import url("../blocks/element/__image/element__image.css");
+@import url("../blocks/element/__trash/element__trash.css");
+@import url("../blocks/element/__subheading/element__subheading.css");
+@import url("../blocks/element/__vector/element__vector.css");
+@import url("../blocks/element/__vector/_active/element__vector_active.css");
+@import url("../blocks/element/__description/element__description.css");
+@import url("../blocks/element/__like-counter/element__like-counter.css");
+@import url("../blocks/element/__group-like/element__group-like.css");
+@import url("../blocks/footer/footer.css");
+@import url("../blocks/footer/__copyrights/footer__copyrights.css");
+@import url("../blocks/popup/popup.css");
+@import url("../blocks/popup/_opened/popup_opened.css");
+@import url("../blocks/popup/__heading/popup__heading.css");
+@import url("../blocks/popup/__form/popup__form.css");
+@import url("../blocks/popup/__input/popup__input.css");
+@import url("../blocks/popup/__container/popup__container.css");
+@import url("../blocks/popup/__button/popup__button.css");
+@import url("../blocks/popup/__button/_disabled/popup__button_disabled.css");
+@import url("../blocks/popup/__button-close/popup__button-close.css");
+@import url("../blocks/popup-zoom/popup-zoom.css");
+@import url("../blocks/popup-zoom/__image/popup-zoom__image.css");
+@import url("../blocks/popup-zoom/__subheading/popup-zoom__subheading.css");
+@import url("../blocks/popup-zoom/__container/popup-zoom__container.css");
+@import url("../blocks/popup/__input/_type/popup__input_type_error.css");
+@import url("../blocks/popup/__input-error/popup__input-error.css");
+@import url("../blocks/popup/__input-error/_active/popup__input-error_active.css");
+@import url("../blocks/popup/__button/_disabled/popup__button_disabled.css");
+@import url("../blocks/popup-sure/popup-sure.css");
+@import url("../blocks/popup-sure/__heading/popup-sure__heading.css");
