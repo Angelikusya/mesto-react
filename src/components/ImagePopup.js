@@ -1,4 +1,4 @@
-function ImagePopup({card, onClose}) {
+function ImagePopup({card, onClose, name}) {
     return(
         <div className={`popup popup-zoom ${card ? "popup_opened" : ""}`}>
             <div className="popup-zoom__container">
@@ -8,7 +8,7 @@ function ImagePopup({card, onClose}) {
                 onClick= {onClose} 
             />
             <img src={`${card?.link}`} alt="Увеличенное фото" className="popup-zoom__image" />
-            <h2 className="popup-zoom__subheading" />
+            <h2 className="popup-zoom__subheading">{card.name}</h2>
             </div>
         </div>
     )    

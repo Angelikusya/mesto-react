@@ -20,8 +20,8 @@ function Card({card, name, likes, link, onCardClick }) {
                     <div className="element__group-like">
                         <button
                             type="button"
-                            className="element__vector">
-                        </button>
+                            className="element__vector"
+                        />
                         <p className="element__like-counter">{likes}</p>
                     </div>
                 </div>
