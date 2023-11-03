@@ -90,26 +90,15 @@ export default class Api {
         .then(this._checkResponse);
     }
 
-    // добавляем лайк карточке на сервере
-    addLike(imageId) {
-        return fetch(`${this.baseUrl}/cards/${imageId}/likes`, {
-            method: 'PUT',
+    // добавляем и убираем лайк карточке на сервере
+    changeLikeCardStatus(card, isLiked) {
+        return fetch(`${this.baseUrl}/cards/${card}/likes`, {
+            method: !isLiked ? "DELETE" : "PUT",
             headers: {
                 authorization: this.token
             }
         })
         .then(this._checkResponse)
-    }
-
-    // удаляем лайк карточки на сервере
-    deleteLike(imageId) {
-        return fetch(`${this.baseUrl}/cards/${imageId}/likes`, {
-            method: 'DELETE',
-            headers: {
-                authorization: this.token
-            }
-        })
-        .then(this._checkResponse);
     }
 }
 

@@ -1,14 +1,34 @@
-function Card({card, name, likes, link, onCardClick }) {
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import { useContext } from "react";
+
+function Card({card, name, likes, link, onCardClick, onCardLike, onCardDelete }) {
+
+    const currentUser = useContext(CurrentUserContext);
+    const isOwn = card.owner._id === currentUser._id;
+    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    const cardLikeButtonClassName = (`element__vector ${isLiked && 'element__vector_active'}`);; 
+
     function handleClick() {
         onCardClick(card)
     }
+
+    function handleLikeClick() {
+        onCardLike(card)
+      };
+
+      function handleDeleteClick() {
+        onCardDelete(card)
+      }
+
+
     return (
         <div className="element-template" id="element-template">
             <article className="element">
-                <button 
-                    type="button"
-                    className="element__trash">
-                </button> 
+            {isOwn && (<button 
+                            type="button"
+                            className="element__trash"
+                            onClick={handleDeleteClick} >
+                        </button>)}
                 <div 
                     className="element__image" 
                     onClick={handleClick} 
@@ -20,7 +40,8 @@ function Card({card, name, likes, link, onCardClick }) {
                     <div className="element__group-like">
                         <button
                             type="button"
-                            className="element__vector"
+                            className={cardLikeButtonClassName}
+                            onClick={handleLikeClick}
                         />
                         <p className="element__like-counter">{likes}</p>
                     </div>
