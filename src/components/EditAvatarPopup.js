@@ -32,7 +32,7 @@ return (
         name="avatar"
         placeholder="Ссылка на картинку"
         required
-        ref={avatarRef}
+        ref={avatarRef || ''}
         />
     </PopupWithForm>
     )

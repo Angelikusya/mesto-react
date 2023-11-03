@@ -14,7 +14,7 @@ const [description, setDescription]= useState('');
     React.useEffect(() => {
         setName(currentUser.name);
         setDescription(currentUser.about);
-    }, [currentUser]);
+    }, [currentUser, isOpen]);
 
 	function handleNameChange(e) {
 		setName(e.target.value);
@@ -53,7 +53,7 @@ const [description, setDescription]= useState('');
             placeholder="Введите имя"
             minLength="2" maxLength="40"
             required
-            value={name}
+            value={name || ''}
             onChange={handleNameChange}
         />
       <span className="popup__input-error" id="name-input-error"></span>
@@ -65,7 +65,7 @@ const [description, setDescription]= useState('');
             placeholder="Введите профессию"
             minLength="2" maxLength="200"
             required
-            value={description}
+            value={description || ''}
             onChange={handleDescriptionChange}
         />
             <span className="popup__input-error" id="job-input-error"></span>

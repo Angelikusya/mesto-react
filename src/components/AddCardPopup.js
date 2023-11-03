@@ -37,7 +37,7 @@ function AddPlacePopup ({ isOpen, onClose, onAddPlace }) {
             placeholder="Название"
             minLength="2" maxLength="30"
             required
-            ref={placeNameRef}
+            ref={placeNameRef  || ''}
         />
         <span className="popup__input-error" id="place-input-error"></span>
         <input  
@@ -47,7 +47,7 @@ function AddPlacePopup ({ isOpen, onClose, onAddPlace }) {
             placeholder="Ссылка на картинку"
             type="url"
             required
-            ref={placeLinkRef}
+            ref={placeLinkRef  || ''}
         />
         <span className="popup__input-error" id="image-input-error"></span>
     </PopupWithForm>
